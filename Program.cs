@@ -32,4 +32,52 @@ if (age4 >= 18) {
 }
 
 
+int age5 = 14;
+if (age5 < 13)
+{
+    Console.WriteLine("Ребёнок");
+}
+else if (age5 < 18)
+{
+    Console.WriteLine("Подросток");
+}
+else
+{
+    Console.WriteLine("Взрослый");
+}
+
+
+int age6 = 14;
+if (age6 < 13) {
+    Console.WriteLine("Ребёнок");
+} else if (age6 < 18) {
+    Console.WriteLine("Подросток");
+} else if (age6 >= 60) {
+    Console.WriteLine("Пенсионер");
+} else {
+    Console.WriteLine("Взрослый");
+}
+
+
+int age7 = 16;
+double height = 1.55;
+bool hasAdult = true;
+if (age7 >= 14 && height >= 1.5) {
+    Console.WriteLine("Можно кататься");
+} else {
+    Console.WriteLine("Пока нельзя");
+}
+
+
+int age = 16;
+double height1 = 1.55;
+bool hasAdult1 = true;
+if (age >= 14 && height1 >= 1.5) {
+    Console.WriteLine("Можно кататься");
+} else if (height1 < 1.5 && hasAdult1) {
+    Console.WriteLine("Можно кататься с сопровождением взрослого");
+} else {
+    Console.WriteLine("Пока нельзя");
+}
+
 
