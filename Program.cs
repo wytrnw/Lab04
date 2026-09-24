@@ -81,3 +81,103 @@ if (age >= 14 && height1 >= 1.5) {
 }
 
 
+Console.WriteLine();
+Console.WriteLine("Задача А.");
+
+Console.Write("Введите число: ");
+int n = int.Parse(Console.ReadLine());
+if (n % 2 == 0)
+    Console.WriteLine("Чётное");
+else
+    Console.WriteLine("Нечётное");
+
+Console.WriteLine();
+Console.WriteLine("Задача Б.");
+
+Console.Write("Введите оценку: ");
+int grade = int.Parse(Console.ReadLine());
+switch (grade)
+{
+    case 5:
+        Console.WriteLine("Отлично");
+        break;
+    case 4:
+        Console.WriteLine("Хорошо");
+        break;
+    case 3:
+        Console.WriteLine("Удовлетворительно");
+        break;
+    case 2:
+        Console.WriteLine("Неудовлетворительно");
+        break;
+    default:
+        Console.WriteLine("Неверная оценка");
+        break;
+}
+
+
+
+
+
+
+
+Console.Write("Введите ваш возраст (целое число): ");
+string input = Console.ReadLine();
+
+if (int.TryParse(input, out int age8))
+{
+    // Проверяем условие доступа
+    if (age8 >= 18)
+    {
+        Console.WriteLine("Доступ разрешён");
+    }
+    else
+    {
+        Console.WriteLine("Доступ запрещён");
+    }
+}
+else
+{
+    Console.WriteLine("Ошибка: пожалуйста, введите корректное целое число.");
+}
+
+
+
+
+
+Console.Write("Введите сумму покупки: ");
+string input2 = Console.ReadLine();
+
+
+if (double.TryParse(input2, out double amount))
+{
+double discountPercent = 0;
+
+
+if (amount > 1000)
+{
+discountPercent = 10; // Скидка 10%
+}
+else if (amount > 500)
+{
+discountPercent = 5;  
+}
+double finalAmount = amount * (100 - discountPercent) / 100;
+
+Console.WriteLine($"Сумма покупки: {amount:F2} руб.");
+
+if (discountPercent > 0)
+{
+Console.WriteLine($"Применена скидка: {discountPercent}%");
+Console.WriteLine($"Итого к оплате: {finalAmount:F2} руб.");
+}
+else
+{
+Console.WriteLine("Скидка не применяется");
+Console.WriteLine($"Итого к оплате: {amount:F2} руб.");
+}
+}
+else
+{
+Console.WriteLine("Ошибка: пожалуйста, введите корректное число.");
+}
